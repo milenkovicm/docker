@@ -6,8 +6,8 @@ FROM alpine:latest
 
 # Install cURL
 RUN apk --update add curl ca-certificates tar && \
-    curl -Ls https://circle-artifacts.com/gh/andyshinn/alpine-pkg-glibc/6/artifacts/0/home/ubuntu/alpine-pkg-glibc/packages/x86_64/glibc-2.23-r1.apk > /tmp/glibc-2.23-r1.apk && \
-    apk add --allow-untrusted /tmp/glibc-2.23-r1.apk && rm -rf /tmp/glibc* && rm -rf /var/cache/apk/*
+    curl -Ls https://circle-artifacts.com/gh/andyshinn/alpine-pkg-glibc/6/artifacts/0/home/ubuntu/alpine-pkg-glibc/packages/x86_64/glibc-2.21-r2.apk > /tmp/glibc-2.21-r2.apk && \
+    apk add --allow-untrusted /tmp/glibc-2.21-r2.apk && rm -rf /tmp/glibc* && rm -rf /var/cache/apk/*
 
 # Java Version
 ENV JAVA_VERSION_MAJOR 8
