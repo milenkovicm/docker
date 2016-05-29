@@ -12,7 +12,7 @@ RUN apk --update add curl ca-certificates tar && \
 # Java Version
 ENV JAVA_VERSION_MAJOR 8
 ENV JAVA_VERSION_MINOR 92
-ENV JAVA_VERSION_BUILD 15
+ENV JAVA_VERSION_BUILD 14
 ENV JAVA_PACKAGE server-jre
 
 # Download and unarchive Java
