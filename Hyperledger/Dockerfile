@@ -14,4 +14,4 @@ RUN PATH=$GOPATH/src/github.com/hyperledger/fabric/build/bin:$PATH
 WORKDIR $GOPATH/src/github.com/hyperledger/fabric
 
 #peer node start
-CMD ["/usr/local/bin/wrapper.sh", "peer","node","start"]
+CMD ["/usr/local/bin/wrapper.sh", "peer node start"]
