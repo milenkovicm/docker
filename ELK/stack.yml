@@ -1,0 +1,25 @@
+version: '3.3'
+# docker-compose -f stack.yml up
+services:
+
+  elasticsearch:
+    image: elasticsearch:alpine
+
+  kibana:
+    image: kibana
+    ports:
+      - 5601:5601
+
+  logstash:
+    image: logstash:alpine
+    command: logstash -f /config/logstash.conf
+    volumes:
+      - ${PWD}/config/:/config/
+    ports: 
+      - 9600:9600
+      - 5044:5044
+      # tcp logs
+      - 4560:4560
+      # syslogs
+      - 10514:10514/tcp
+      - 10514:10514/udp
